@@ -1,0 +1,1 @@
+Environment variable: FIREBASE_CONFIG and DATABASE_URL(FIREBASE)
