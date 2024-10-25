@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat Application</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="app-name">Chat Application</h1>
+            <div id="usernameContainer">
+                <div id="username-display" class="username-display">
+                    Anonymous
+                </div>
+            </div>
+        </header>
+
+        <div id="room-input-section">
+            <input
+                type="text"
+                id="room-name-input"
+                placeholder="Enter room name"
+            />
+            <button id="join-room-btn" aria-label="Join room">Join Room</button>
+        </div>
+
+        <main id="chat-section" class="hidden">
+            <div id="header">
+                <span id="room-name-display">Room: </span>
+                <button id="leave-room-btn">Leave Room</button>
+            </div>
+            <div id="messages" class="no-messages">
+                <p class="no-messages-text">Hiện chưa có tin nhắn</p>
+            </div>
+            <input
+                type="text"
+                id="message-input"
+                placeholder="Type a message"
+            />
+            <button id="send-message-btn">Send</button>
+        </main>
+        <div id="error-message" class="hidden"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

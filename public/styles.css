@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+}
+
+#user-info {
+  display: flex;
+  align-items: center;
+}
+
+#user-info button {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+#room-input-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-section {
+  width: 70%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#messages {
+  height: 400px;
+  overflow-y: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Scrollbar Customization */
+#messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+}
+
+#messages::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+/* Message Styling */
+.message {
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.message.sent {
+  background-color: #e0f7fa; /* Light blue for sent messages */
+  align-self: flex-end; /* Align sent messages to the right */
+}
+
+.message.received {
+  background-color: #fff; /* White for received messages */
+  align-self: flex-start; /* Align received messages to the left */
+}
+
+/* Error Message Styling */
+#error-message {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Username styling */
+#usernameContainer {
+  display: inline-block;
+  margin: 10px;
+}
+
+#usernameInput {
+  /* display: none; Initially hidden */
+  font-size: 16px;
+  width: 200px;
+}
+
+/* Hover Effects */
+#user-info button:hover,
+#join-room-btn:hover,
+#send-message-btn:hover,
+#leave-room-btn:hover {
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #chat-section {
+      width: 90%;
+  }
+
+  #room-input-section {
+      width: 90%;
+  }
+}
